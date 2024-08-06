@@ -56,7 +56,7 @@ export default function AppFormGeneralInformation() {
               zalo: formData.zalo,
               images: formData.images
           }
-          let updateInfo = await axios.post('https://booking-kohl-six.vercel.app/siteInfo/update', data, {
+          let updateInfo = await axios.post('https://sunny24.vercel.app/siteInfo/update', data, {
             headers: {
               Authorization: token
             }
@@ -97,7 +97,7 @@ export default function AppFormGeneralInformation() {
 
         const fetchInfo = async () => {
             try {
-                let info = await axios.post('https://booking-kohl-six.vercel.app/siteInfo');
+                let info = await axios.post('https://sunny24.vercel.app/siteInfo');
                 info = info?.data;
                 if (info?.code === 1000) {
                     setFormData({

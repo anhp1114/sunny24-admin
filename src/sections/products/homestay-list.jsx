@@ -171,7 +171,7 @@ export default function HomeStayList() {
 
 
       try {
-          let updateHomeStay = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://booking-kohl-six.vercel.app'}/room`, data, {
+          let updateHomeStay = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://sunny24.vercel.app'}/room`, data, {
             headers: {
               Authorization: token 
             }
@@ -270,7 +270,7 @@ export default function HomeStayList() {
               id: selectHomeStay.id,
               isDeleted: true
             }
-            let deletedResult = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://booking-kohl-six.vercel.app'}/room`, data, {
+            let deletedResult = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://sunny24.vercel.app'}/room`, data, {
               headers: {
                 Authorization: token
               }
@@ -326,7 +326,7 @@ export default function HomeStayList() {
           color: editBranch?.color
         };
         if(!_.isNil(editBranch?.id))data.id = editBranch.id
-        let addBranch = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://booking-kohl-six.vercel.app'}/branch`, data, {
+        let addBranch = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://sunny24.vercel.app'}/branch`, data, {
           headers: {
             Authorization: token 
           }
@@ -343,7 +343,7 @@ export default function HomeStayList() {
 
     const fetchHomeStay = async () => {
         try {
-            let homestayResult = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://booking-kohl-six.vercel.app'}/room/search`);
+            let homestayResult = await axios.post(`${import.meta.env.VITE_URL_BACKEND || 'https://sunny24.vercel.app'}/room/search`);
             homestayResult = homestayResult?.data;
             if (homestayResult?.code === 1000) {
                 setHomeStay(homestayResult?.data?.rooms);
@@ -356,7 +356,7 @@ export default function HomeStayList() {
     // lấy thông tin danh sách chi nhánh
     const fetchBranchList = async () => {
         try {
-            let brachListResult = await axios.get(`${import.meta.env.VITE_URL_BACKEND || 'https://booking-kohl-six.vercel.app'}/branch`);
+            let brachListResult = await axios.get(`${import.meta.env.VITE_URL_BACKEND || 'https://sunny24.vercel.app'}/branch`);
             brachListResult = brachListResult?.data;
             if (brachListResult?.code === 1000) {
               setBranchList(brachListResult?.data);

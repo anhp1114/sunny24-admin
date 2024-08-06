@@ -58,7 +58,7 @@ const InfiniteScrollTable = (props) => {
   const handleSendMail = async (bookingId) => {
     try {
       let result = await axios.post(
-        'https://booking-kohl-six.vercel.app/booking/reSendMail',
+        'https://sunny24.vercel.app/booking/reSendMail',
         { bookingId },
         {
           headers: {
@@ -101,7 +101,7 @@ const InfiniteScrollTable = (props) => {
   const handleAgree = async (bookingId) => {
     try {
       const result = await axios.post(
-        'https://booking-kohl-six.vercel.app/booking/delete',
+        'https://sunny24.vercel.app/booking/delete',
         { bookingId },
         {
           headers: {
@@ -125,7 +125,7 @@ const InfiniteScrollTable = (props) => {
     try {
       console.log('note', note);
       const result = await axios.post(
-        'https://booking-kohl-six.vercel.app/booking/addNote',
+        'https://sunny24.vercel.app/booking/addNote',
         { bookingId, note },
         {
           headers: {

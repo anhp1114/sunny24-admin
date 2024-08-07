@@ -8,7 +8,7 @@ export default function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title> Mary Jane The Home </title>
+        <title> Sunny24 - Admin </title>
       </Helmet>
 
       <ProductsView />

@@ -11,7 +11,7 @@ export default function ChangePassPage() {
   return (
     <>
       <Helmet>
-        <title> Mary Jane The Home </title>
+        <title> Sunny24 - Admin </title>
       </Helmet>
 
       <ChangePassView />
